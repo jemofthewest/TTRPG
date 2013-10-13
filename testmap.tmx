@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="terrain_atlas" tilewidth="32" tileheight="32">
+  <image source="terrain_atlas.png" width="1024" height="1024"/>
+ </tileset>
+ <layer name="Base" width="32" height="32">
+  <properties>
+   <property name="abovePlayer" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJyFlVFuwzAMQ+ur62a2LrYNSIGXFyr7MNImNiVRpNzr8zm/q7HOtfa1Dp5/q67/jbMbz63zW5jG857W+8Lvvv634h99K/zeehKf+bM+xnSNvTIXU07c+33yfeNbC3OquRS/1pNPniUXxnd91MNedz6I1UNsfneePMfYxE19+09T5DMtn0t6Yl+IWetem+t0/1txrOnSu9Qb18e49mitZ49TLJ51/t8zte49a+31rEi+tYbtccZkLNZX2lOKXYprvCOMHd45rpfzsd+YC/lnTuTR38m3tZ7mI3lI+1POaU+qhxq2V8mze0OuE27qaeJq0he5TTpMXKScrXv3feoLPWwNMUfPMPe2tM/8+p6wL5NHzLdnELmtEOOsO0+T/6x3+5970j1qT7rPSQM8Y96Tdhg7YZgr43uOp/rNvXUznbGG2F/mnTyZtMVarLW0zz5OGph8bu/s9ewd62Fu1H2amW9ziXiMaSzf59aGvzGvdAelmWJuyZ9z993MZ8op+cczbJoDk0fSnTT5xnWbX9d8hGGdEzvVau7cb/ObtFwveJ5L1lHSKvmeeLamPGOcP/uZNOPYrM14rGfSv+tP98MRNntWK/N5wj7zZ+0cxGcfkwaTt90L1kFsz4O3+lPPk0+Jk+a+4yWMNJOtaS/X7dlmH008p1nD987nB24q0Nc=
+  </data>
+ </layer>
+ <layer name="Alternate" width="32" height="32">
+  <properties>
+   <property name="abovePlayer" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztlMENglAQRJdwVqvQm1qF3NQqoBL8lXysBDT2IR6twdlkTX44yfLjavInmSO8YXYCUVJSHNU50Ql2uf4ds4xoDi+y8c96cB9wOSHDGtwN/KTxGVowC/gOnyfyNRm4/0r42g5C/tgMXtgN3Cs7GPLZ2w/53H8nN+iVHezBOgx8VO5A20EMvbu4GPGT/ltLbL6BV4r/cAw5cDvYG2XYgVlJhtqwg9sP8L1s4dt7CG/AOa4GXbiAb7EFJ9/Nbg34fIMycGG0xaSkpPh6AUNSNAE=
+  </data>
+ </layer>
+ <layer name="Wall" width="32" height="32">
+  <properties>
+   <property name="abovePlayer" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzdEKABAMhWHlDTy92ctK7UIzxQ03/1cnmdOktCo5GF463TF6P1MtYqdOs5Hm7rp5E9eToBf9AQAAAADACx3N9RY+
+  </data>
+ </layer>
+ <layer name="Ceiling" width="32" height="32">
+  <properties>
+   <property name="abovePlayer" value="0"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzcENABAQAEGJGlGJqATtuircZzbZ97RaSk96xDPOavH5fD6fz+fz+Xw+n//J3/FJ+sYPbB06nQ==
+  </data>
+ </layer>
+ <layer name="Objects" width="32" height="32">
+  <properties>
+   <property name="abovePlayer" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGL5jEzMAQBMUDAQqZITh4gOz/yMTA8AmIPzMNjP2CQH8LAbEwjfz/B+ivv3j8Zgi01wiIjWlkvwzQXNkBiltcIG6A3VNHof2CwPgUQsPCeOL4CyOE/spImb0wYAi0ywgNG+OxXwQqJzpAecwEaq8pmv2MVAqPUTAKRsHwAgCVAg2N
+  </data>
+ </layer>
+</map>
