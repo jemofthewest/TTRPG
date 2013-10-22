@@ -12,7 +12,11 @@ extern "C" {
 int main()
 {
   /* create the window */
-  sf::RenderWindow window(sf::VideoMode(1024,1024), "Tilemap");
+  sf::RenderWindow window(sf::VideoMode(640,480), "Tilemap");
+
+  /* Create the viewport */
+  sf::View view(sf::Vector2f(500,500), sf::Vector2f(640,480));
+  window.setView(view);
 
   /* open lua state */
   lua_State *L = luaL_newstate();
@@ -32,6 +36,12 @@ int main()
     {
       if(event.type == sf::Event::Closed)
         window.close();
+
+      if (event.type == sf::Event::Resized)
+      {
+        sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+        window.setView(sf::View(visibleArea));
+      }
     }
 
     /* draw the map */
