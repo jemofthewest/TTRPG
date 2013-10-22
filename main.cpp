@@ -7,7 +7,7 @@ extern "C" {
 #include "debug.h"
 }
 
-#include "TileMap.hpp"
+#include "TileLayer.hpp"
 
 int main()
 {

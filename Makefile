@@ -1,12 +1,12 @@
 .SUFFIXES:
-	.SUFFIXES: .c .cpp .o
+.SUFFIXES: .c .cpp .o
 
 CFLAGS=-Wall -g
 LDFLAGS=-llua -ldl -lsfml-system -lsfml-graphics -lsfml-window
 
 all: main
 
-main: TileMap.o debug.o
+main: TileLayer.o debug.o
 
 clean:
 	rm -f bin/*

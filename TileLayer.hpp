@@ -1,5 +1,5 @@
-#ifndef TILEMAP_H
-#define TILEMAP_H
+#ifndef TILELAYER_H
+#define TILELAYER_H
 
 class TileLayer : public sf::Drawable, public sf::Transformable
 {

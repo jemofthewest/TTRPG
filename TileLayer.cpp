@@ -7,7 +7,7 @@ extern "C" {
 #include "debug.h"
 }
 
-#include "TileMap.hpp"
+#include "TileLayer.hpp"
 
 bool TileLayer::load(lua_State *L, const char* filename, unsigned int layer)
 {
