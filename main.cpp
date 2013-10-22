@@ -7,7 +7,7 @@ extern "C" {
 #include "debug.h"
 }
 
-#include "TileLayer.hpp"
+#include "TileMap.hpp"
 
 int main()
 {
@@ -17,27 +17,12 @@ int main()
   // open lua state
   lua_State *L = luaL_newstate();
   luaL_openlibs(L);
+
+  /* Create map */
+  TileMap testMap;
+  const char* filename = "testmap.lua";
+  testMap.load(L, filename);
   
-  TileLayer layer1;
-  if (!layer1.load(L, "testmap.lua", 1))
-    return -1;
-
-  TileLayer layer2;
-  if (!layer2.load(L, "testmap.lua", 2))
-    return -1;
-
-  TileLayer layer3;
-  if (!layer3.load(L, "testmap.lua", 3))
-    return -1;
-
-  TileLayer layer4;
-  if (!layer4.load(L, "testmap.lua", 4))
-    return -1;
-
-  TileLayer layer5;
-  if (!layer5.load(L, "testmap.lua", 5))
-    return -1;
-
   // run the main loop
   while (window.isOpen())
   {
@@ -51,11 +36,7 @@ int main()
 
     // draw the map
     window.clear();
-    window.draw(layer1);
-    window.draw(layer2);
-    window.draw(layer3);
-    window.draw(layer4);
-    window.draw(layer5);
+    window.draw(testMap);
     window.display();
   }
 
