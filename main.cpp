@@ -11,10 +11,10 @@ extern "C" {
 
 int main()
 {
-  // create the window
+  /* create the window */
   sf::RenderWindow window(sf::VideoMode(1024,1024), "Tilemap");
 
-  // open lua state
+  /* open lua state */
   lua_State *L = luaL_newstate();
   luaL_openlibs(L);
 
@@ -23,10 +23,10 @@ int main()
   const char* filename = "testmap.lua";
   testMap.load(L, filename);
   
-  // run the main loop
+  /* run the main loop */
   while (window.isOpen())
   {
-    // handle events
+    /* handle events */
     sf::Event event;
     while (window.pollEvent(event))
     {
@@ -34,7 +34,7 @@ int main()
         window.close();
     }
 
-    // draw the map
+    /* draw the map */
     window.clear();
     window.draw(testMap);
     window.display();
