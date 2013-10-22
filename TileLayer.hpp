@@ -1,11 +1,13 @@
 #ifndef TILELAYER_H
 #define TILELAYER_H
 
+#include <SFML/Graphics.hpp>
+
 class TileLayer : public sf::Drawable, public sf::Transformable
 {
   public:
 
-    bool load(lua_State *L, const char* filename, unsigned int layer);
+    void load(lua_State *L, const char* filename, unsigned int layer);
 
   private:
 

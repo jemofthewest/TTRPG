@@ -9,7 +9,7 @@ extern "C" {
 
 #include "TileLayer.hpp"
 
-bool TileLayer::load(lua_State *L, const char* filename, unsigned int layer)
+void TileLayer::load(lua_State *L, const char* filename, unsigned int layer)
 {
   unsigned int mapwidth, mapheight, tilewidth, tileheight;
   unsigned int numTilesets, dataSize;
@@ -33,7 +33,7 @@ bool TileLayer::load(lua_State *L, const char* filename, unsigned int layer)
   tileset = lua_tolstring(L, -1, NULL);
   lua_pop(L, 3);
   if (!m_tileset.loadFromFile(tileset))
-    return false;
+    error(L, "Loading tileset went wrong");
 
   /* Get width and height of map */
   lua_getfield(L, -1, "width");
@@ -106,7 +106,4 @@ bool TileLayer::load(lua_State *L, const char* filename, unsigned int layer)
       quad[3].texCoords = sf::Vector2f(tu * tileSize.x, (tv + 1) * tileSize.y);
     }
   }
-
-
-  return true;
 }
